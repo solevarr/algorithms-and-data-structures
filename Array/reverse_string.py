@@ -19,8 +19,14 @@ def reverse_another(some_string):
   reversed_string=  ''.join(reversed(list(some_string)))
   logging.info(reversed_string)
   return reversed_string
-  
+
+def reverse_fast(some_string):
+    if not isinstance(some_string, str):
+      return 'hmm that is not good'
+    return some_string[::-1]
+
 
 if __name__ == '__main__':
-  some_string = 'Hoho haha'
-  reverse_another(some_string)
+  some_string = 'Hello world'
+  reverse_fast(some_string)
+  
